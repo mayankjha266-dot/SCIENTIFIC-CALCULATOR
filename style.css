@@ -1,0 +1,310 @@
+
+/* =========================
+   GENERAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b1120;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #111c32;
+    border-bottom: 1px solid #263650;
+}
+
+header h1 {
+    color: #38bdf8;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+header p {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator {
+    width: 430px;
+    max-width: 100%;
+    background-color: #172338;
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid #293c59;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.calculator-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calculator-heading h2 {
+    font-size: 20px;
+}
+
+#mode {
+    background-color: #075985;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   DISPLAY
+========================= */
+
+.display-area {
+    background-color: #080e1b;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    color: #38bdf8;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 28px;
+}
+
+#message {
+    text-align: right;
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   BUTTON GRID
+========================= */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.buttons button {
+    min-width: 0;
+    height: 52px;
+    border: none;
+    border-radius: 8px;
+    background-color: #263750;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background-color: #3b506d;
+    transform: translateY(-2px);
+}
+
+.buttons .function {
+    background-color: #1e3a5f;
+    color: #7dd3fc;
+}
+
+.buttons .operator {
+    background-color: #075985;
+    color: white;
+}
+
+.buttons .clear {
+    background-color: #9f3030;
+    color: white;
+}
+
+.buttons .equal {
+    background-color: #0284c7;
+    color: white;
+    grid-column: span 5;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CALCULATION HISTORY
+========================= */
+
+.history {
+    width: 300px;
+    max-width: 100%;
+    background-color: #172338;
+    padding: 22px;
+    border-radius: 18px;
+    border: 1px solid #293c59;
+    min-height: 180px;
+}
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.history-heading h2 {
+    font-size: 18px;
+}
+
+#clear-history {
+    background-color: #9f3030;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#history-list {
+    list-style: none;
+}
+
+#history-list li {
+    background-color: #263750;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    color: #cbd5e1;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   TEAM FOOTER
+========================= */
+
+.team-footer {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 20px;
+    background-color: #111c32;
+    border-top: 1px solid #263650;
+}
+
+.team-footer h2 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.team-footer h3 {
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.team-members p {
+    color: #cbd5e1;
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.project-name {
+    color: #38bdf8;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.course-name {
+    color: #64748b;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 700px) {
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .calculator {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .history {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .buttons {
+        gap: 7px;
+    }
+
+    .buttons button {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .team-members {
+        gap: 15px;
+    }
+
+}

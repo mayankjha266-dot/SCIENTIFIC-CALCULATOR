@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Scientific Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>SMART CALCULATOR</h1>
+        <p>Scientific Calculator | Web Development Project</p>
+    </header>
+
+    <main>
+
+        <section class="calculator">
+
+            <div class="calculator-heading">
+                <h2>Scientific Calculator</h2>
+                <button id="mode">DEG</button>
+            </div>
+
+            <div class="display-area">
+
+                <input type="text" id="display"
+                    placeholder="0" readonly>
+
+                <p id="message">Ready to calculate</p>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="function" data-value="sin(">sin</button>
+                <button class="function" data-value="cos(">cos</button>
+                <button class="function" data-value="tan(">tan</button>
+                <button class="function" data-value="cot(">cot</button>
+                <button class="clear" data-action="clear">AC</button>
+
+                <button class="function" data-value="sec(">sec</button>
+                <button class="function" data-value="cosec(">cosec</button>
+                <button class="function" data-value="sqrt(">√</button>
+                <button class="function" data-value="log(">log</button>
+                <button class="clear" data-action="delete">DEL</button>
+
+                <button class="function" data-value="ln(">ln</button>
+                <button class="function" data-value="pi">π</button>
+                <button class="function" data-value="e">e</button>
+                <button class="function" data-value="^2">x²</button>
+                <button class="function" data-value="^">xʸ</button>
+
+                <button class="function" data-value="(">(</button>
+                <button class="function" data-value=")">)</button>
+                <button class="function" data-value="!">x!</button>
+                <button class="function" data-value="%">%</button>
+                <button class="operator" data-value="/">÷</button>
+
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button class="operator" data-value="*">×</button>
+                <button class="operator" data-value="-">−</button>
+
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button class="operator" data-value="+">+</button>
+                <button class="function" data-value="Ans">Ans</button>
+
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button data-value="0">0</button>
+                <button data-value=".">.</button>
+
+                <button class="equal" data-action="calculate">=</button>
+
+            </div>
+
+        </section>
+
+        <section class="history">
+
+            <div class="history-heading">
+                <h2>Calculation History</h2>
+                <button id="clear-history">Clear</button>
+            </div>
+
+            <ul id="history-list">
+                <li>No calculations yet</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="team-footer">
+
+        <h2>DEVELOPED BY</h2>
+        <h3>THE DECODERS</h3>
+
+        <div class="team-members">
+            <p>MAYANK KUMAR JHA</p>
+            <p>ANINDITA</p>
+            <p>PRABHASH</p>
+            <p>HARSHIT</p>
+        </div>
+
+        <p class="project-name">
+            SMART SCIENTIFIC CALCULATOR
+        </p>
+
+        
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
